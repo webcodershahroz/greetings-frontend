@@ -1,0 +1,66 @@
+.right {
+    width: fit-content;
+    background-color: #035386b5;
+    color: white;
+    padding: 2px 9px 2px 9px;
+    margin: 4px 0;
+    border-radius: 5px;
+    float: right;
+    clear: both;
+}
+
+.left {
+    width: fit-content;
+    background-color: #3e4448b3;
+    padding: 2px 9px 2px 9px;
+    margin: 4px 0;
+    border-radius: 5px;
+    float: left;
+    clear: both;
+}
+
+.contact:hover {
+    background-color: #adc0df;
+}
+
+#messageContainer::-webkit-scrollbar,
+.overflowContacts::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+#messageContainer::-webkit-scrollbar-track,
+.overflowContacts::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+#messageContainer::-webkit-scrollbar-thumb,
+.overflowContacts::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+#messageContainer::-webkit-scrollbar-thumb:hover,
+.overflowContacts::-webkit-scrollbar-thumb:hover {
+    background: rgb(98, 98, 98);
+}
+
+.active {
+    background-color: #124767 !important;
+}
+
+.date {
+     font-size: small;
+     margin-left: 12px;
+    color: #928f8f;
+}
+.date-day{
+    clear: both;
+    font-size: small;
+    color: #928f8f;
+}
+.cus-badge{
+    background-color: #056959;
+}
