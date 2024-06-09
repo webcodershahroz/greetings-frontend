@@ -19,7 +19,7 @@ export default function NoteState(props) {
   //Login API call
   const loginUser = (email, password) => {
     setIsUploading(true)
-    fetch("http://localhost:2000/auth/login", {
+    fetch("https://backend-sandy-beta.vercel.app/auth/login", {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -67,7 +67,7 @@ export default function NoteState(props) {
   //Signup API call
   const registerNewUser = (name, pic, email, password) => {
     setIsUploading(true)
-    fetch("http://localhost:2000/auth/signup", {
+    fetch("https://backend-sandy-beta.vercel.app/auth/signup", {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -113,7 +113,7 @@ export default function NoteState(props) {
   }
   //add contact
   const addContact = (name, adderEmail, email) => {
-    fetch("http://localhost:2000/user/addContact", {
+    fetch("https://backend-sandy-beta.vercel.app/user/addContact", {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -145,7 +145,7 @@ export default function NoteState(props) {
   }
 
   // const setMessages = (senderId, reciverId, message) => {
-  //   fetch("http://localhost:2000/user/getContact", {
+  //   fetch("https://backend-sandy-beta.vercel.app/user/getContact", {
   //     method: 'POST',
   //     headers: {
   //       "Content-Type": "application/json"
@@ -157,7 +157,7 @@ export default function NoteState(props) {
   //     .then((data) => { console.log(data) })
   // }
   // const getMessages = (senderId, reciverId) => {
-  //   fetch("http://localhost:2000/messages/getMessages", {
+  //   fetch("https://backend-sandy-beta.vercel.app/messages/getMessages", {
   //     method: 'POST',
   //     headers: {
   //       "Content-Type": "application/json"
@@ -169,7 +169,7 @@ export default function NoteState(props) {
   //     .then((data) => { setMsgFromDb(JSON.parse(data)) })
   // }
   const getContacts = (adderEmail) => {
-    fetch("http://localhost:2000/user/getContact", {
+    fetch("https://backend-sandy-beta.vercel.app/user/getContact", {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"

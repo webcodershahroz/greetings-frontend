@@ -18,7 +18,7 @@ function Chat() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        setSocket(io('http://localhost:8081'))
+        setSocket(io('https://backend-sandy-beta.vercel.app'))
 
 
     }, [])

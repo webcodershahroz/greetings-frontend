@@ -27,7 +27,7 @@ function MessageBox() {
     setMessage('')
 
     //save message to database
-    await fetch("http://localhost:2000/messages/saveMessages", {
+    await fetch("https://backend-sandy-beta.vercel.app/messages/saveMessages", {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"

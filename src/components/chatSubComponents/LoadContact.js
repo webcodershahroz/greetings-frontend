@@ -5,20 +5,22 @@ import {
     VStack
 } from '@chakra-ui/react'
 import noteContext from '../context/ChatContext'
+import { useNavigate } from 'react-router-dom';
 
 function LoadContact(props) {
     const { setMessagesFromDb, setActiveReciver, activeReciver, lastMessage, setLastMessage } = useContext(noteContext)
     const element = props.value;
+    const navigation = useNavigate()
     const loginDetails = JSON.parse(localStorage.getItem('loginDetails'));
     const handleNewUser = async () => {
-
+        navigation('/messages');
         await setLastMessage(lastMessage.filter(em => em.reciver !== element.email))
         console.log(lastMessage)
         setMessagesFromDb(null)
         await setActiveReciver(element.email)
    
         //get messages from db
-        fetch("http://localhost:2000/messages/showMessages", {
+        fetch("https://backend-sandy-beta.vercel.app/messages/showMessages", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -47,8 +49,6 @@ function LoadContact(props) {
 
     return (
         <>
-            <a href="#messageContainer">
-
                 <Box
                     display={'flex'}
                     justifyContent={'center'}
@@ -79,7 +79,6 @@ function LoadContact(props) {
                         </Box>
                     </HStack>
                 </Box>
-            </a>
         </>
     )
 }
